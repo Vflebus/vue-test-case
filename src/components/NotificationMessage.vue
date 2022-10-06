@@ -31,7 +31,7 @@ export default {
 };
 </script>
     
-<style lang="scss">
+<style lang="scss" scoped>
 .caption {
   position: relative;
   min-height: 5vh;
