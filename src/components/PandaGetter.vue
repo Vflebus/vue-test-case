@@ -2,11 +2,11 @@
   <div class="getter column-center">
     <h2>PANDA</h2>
     <div
-      v-if="!this.$store.state.loadingPanda"
+      v-if="!this.$store.state.animals.loadingPanda"
       class="getterInfos column-center"
     >
-      <img :src="this.$store.state.panda.image" />
-      <p>{{ this.$store.state.panda.fact }}</p>
+      <img :src="this.$store.state.animals.panda.image" />
+      <p>{{ this.$store.state.animals.panda.fact }}</p>
     </div>
   </div>
 </template>
@@ -15,20 +15,13 @@
 export default {
   data() {
     return {
-      loaded: false,
     };
   },
   created() {
-    console.log(!this.$store.state.loadingPanda);
+    console.log(!this.$store.state.animals.loadingPanda);
     this.$store.dispatch("getPandaAction");
   },
   updated() {
-    if (!this.$store.state.loadingPanda) {
-      this.$store.dispatch("newNotificationAction", {
-        type: "success",
-        message: "successfully loaded Panda !",
-      });
-    }
   },
 };
 </script>

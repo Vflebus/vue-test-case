@@ -1,6 +1,6 @@
 <template>
-  <div v-if="this.$store.state.notifications.length > 0">
-    <NotificationMessage :type="this.$store.state.notifications.at(-1).type" :message="this.$store.state.notifications.at(-1).message" :number="this.$store.state.notifications.length"/>
+  <div v-if="this.$store.state.notifications.notifications.length > 0">
+    <NotificationMessage :type="this.$store.state.notifications.notifications.at(-1).type" :message="this.$store.state.notifications.notifications.at(-1).message" :number="this.$store.state.notifications.notifications.length"/>
   </div>
   <div id="notifications"></div>
   <div class="column-center" id="app">

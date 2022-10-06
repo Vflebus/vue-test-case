@@ -1,4 +1,4 @@
-export default notifications = {
+const notificationsMutations = {
     newNotificationMutation(state, notification){
       state.notifications.push(notification);
     },
@@ -6,3 +6,5 @@ export default notifications = {
       state.notifications.pop();
     }
 }
+
+export default notificationsMutations
